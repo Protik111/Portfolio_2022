@@ -8,6 +8,7 @@ const HeadSeo = ({ title, description, keywords }) => {
                 <meta name='description' content={description} />
                 <meta name='keywords' content={keywords} />
                 <link rel="icon" href="/bracket.png" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
             </Head>
         </div>
     );
