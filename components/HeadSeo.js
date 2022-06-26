@@ -1,27 +1,22 @@
-import styles from '../styles/Layout.module.scss';
-import Navbar from './Navbar';
 import Head from 'next/head';
 
-const Layout = ({ title, description, keywords, children }) => {
+const HeadSeo = ({ title, description, keywords }) => {
     return (
         <div>
             <Head>
                 <title>{title}</title>
                 <meta name='description' content={description} />
                 <meta name='keywords' content={keywords} />
+                <link rel="icon" href="/bracket.png" />
             </Head>
-            <Navbar></Navbar>
-            <div className={styles.container}>
-                {children}
-            </div>
         </div>
     );
 };
 
-Layout.defaultProps = {
+HeadSeo.defaultProps = {
     title: 'Protik The Dev',
     description: 'Protik The Developer',
     keywords: 'Protik The Developer',
   }
 
-export default Layout;
+export default HeadSeo;
