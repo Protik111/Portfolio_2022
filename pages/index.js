@@ -3,12 +3,14 @@ import Navbar from '../components/Navbar';
 import Type from '../components/Type';
 import styles from '../styles/Home.module.scss';
 import Tilt from "react-parallax-tilt";
+import Social from '../components/Social';
 
 export default function Home() {
   return (
     <div>
       <HeadSeo title={"ProtikTheDev!"} description={"Protik The Developer"} keywords={"Protik The Developer"}></HeadSeo>
       <Navbar></Navbar>
+      <Social></Social>
       <div className={`${styles.container} container`}>
         <div className={`${styles.details} row`}>
           <div className={`${styles.textContainer} col-12 col-sm-12 col-md-12 col-lg-7`}>

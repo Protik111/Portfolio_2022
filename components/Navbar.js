@@ -3,7 +3,6 @@ import { AiFillHome } from 'react-icons/ai';
 import { FiCode } from 'react-icons/fi';
 import { BsFillPenFill, BsFillPersonFill } from 'react-icons/bs';
 import { MdEmail, MdDoubleArrow } from 'react-icons/md';
-import { GiWideArrowDunk } from 'react-icons/gi';
 
 
 const Navbar = () => {

@@ -1,0 +1,22 @@
+.container {
+    position: absolute;
+    top: 0;
+    right: 12px;
+
+    .iconList {
+        display: flex;
+        justify-content: center;
+
+        .icon {
+            padding: 0.5rem;
+
+            .singleIcon {
+                color: #B1DAE7;
+                transition: all 0.1s ease-in;
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
