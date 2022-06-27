@@ -1,5 +1,6 @@
 import HeadSeo from '../components/HeadSeo';
 import Navbar from '../components/Navbar';
+import Type from '../components/Type';
 import styles from '../styles/Home.module.scss';
 // import 'antd/dist/antd.css';
 
@@ -9,12 +10,26 @@ export default function Home() {
       <HeadSeo title={"ProtikTheDev!"} description={"Protik The Developer"} keywords={"Protik The Developer"}></HeadSeo>
       <Navbar></Navbar>
       <div className={`${styles.container} container`}>
-        <div className="row">
-          <div className="col-md-7">
-            <h2>Rafiur Rahman Protik</h2>
+        <div className={`${styles.details} row`}>
+          <div className={`${styles.textContainer} col-12 col-sm-12 col-md-6 col-lg-7`}>
+            <h1 className="heading">
+              Hi There! <span className={styles.wave} role="img" aria-labelledby="wave">👋🏻</span>
+            </h1>
+
+            <span className={styles.Iam}>I'm</span>
+            <h1 className="heading-name">
+              <strong className="main-name"> Rafiur Rahman Protik.</strong>
+            </h1>
+
+            <div className={styles.typeWriter}>
+              <Type />
+            </div>
+            <button className={styles.button}>
+              See My Works
+            </button>
           </div>
 
-          <div className="col-md-5">
+          <div className="col-12 col-sm-12 col-md-5 col-lg-4 offset-lg-1">
             <div className={styles.profile}>
               <div className={styles.center}>
                 <div className={styles.white}>

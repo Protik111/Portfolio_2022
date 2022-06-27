@@ -2,63 +2,164 @@
 
 .container {
     height: 105vh;
-    margin-left: 15rem;
+    // margin-left: 15rem;
     min-width: 100%;
     background-color: #181838;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .details {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .textContainer {
+        color: #B1DAE7;
+
+        .wave {
+            animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+            animation-duration: 2.1s; /* Change to speed up or slow down */
+            animation-iteration-count: infinite; /* Never stop waving :) */
+            transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+            display: inline-block;
+          }
+
+          @keyframes wave-animation {
+            0% {
+              transform: rotate(0deg);
+            }
+            10% {
+              transform: rotate(14deg);
+            } /* The following five values can be played with to make the waving more or less extreme */
+            20% {
+              transform: rotate(-8deg);
+            }
+            30% {
+              transform: rotate(14deg);
+            }
+            40% {
+              transform: rotate(-4deg);
+            }
+            50% {
+              transform: rotate(10deg);
+            }
+            60% {
+              transform: rotate(0deg);
+            } /* Reset for the last half to pause */
+            100% {
+              transform: rotate(0deg);
+            }
+          }
+        
+        .typeWriter {
+            color: #B1DAE7;
+            font-size: 2rem;
+        }
+
+        .Iam {
+            font-size: 1.6rem;
+        }
+
+        .button {
+            cursor: pointer;
+            position: relative;
+            border: none;
+            background: none;
+            transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+            transition-duration: 200ms;
+            transition-property: color;
+            color: white;
+            background-image: linear-gradient(180deg, var(--nav-primary1) 0%, var(--nav-primary2) 99%);
+            padding: 0.8rem 2rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+            margin-top: 0.6rem;
+        }
+        
+        .button:focus,
+        .button:hover {
+            color: #B1DAE7;
+            transform: scale(1.1);
+        }
+        
+        .button:focus:after,
+        .button:hover:after {
+            width: 100%;
+            left: 0%;
+        }
+        
+        .button:after {
+            content: "";
+            pointer-events: none;
+            bottom: -2px;
+            left: 50%;
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background-color: #B1DAE7;
+            transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+            transition-duration: 400ms;
+            transition-property: width, left;
+        }
+    }
 }
 
-
-// body {
-//   background: black;
-//   height: 100vh;
-//   overflow: hidden;
-//   align-items: center;
-//   display: flex;
-//   justify-content: center;
-// }
-
 .profile {
-  aspect-ratio: 6.5 / 8;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 5px;
-  width: 350px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    aspect-ratio: 6.5 / 8;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 880px) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .center {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  height: 300px;
-  padding: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 300px;
+    padding: 20px;
+
+    @media screen and (max-width: 880px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
 }
 
 .white {
-  min-height: 72%;
-  position: relative;
-  aspect-ratio: 1;
-  border: 4px solid white;
-  border-radius: 50%;
+    min-height: 72%;
+    position: relative;
+    aspect-ratio: 1;
+    border: 4px solid #B1DAE7;
+    border-radius: 50%;
 }
 
 .img {
-  height: 230px;
-  width: 230px;
-  border-radius: 50%;
-  margin: 8px;
-  object-fit: cover;
+    height: 230px;
+    width: 230px;
+    border-radius: 50%;
+    margin: 8px;
+    object-fit: cover;
 }
 
 .name {
-  font-family: 'Pacifico', cursive;
-  font-size: 2em;
-  color: white;
-  margin: 0px;
-  text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 2em;
+    color: #B1DAE7;
+    margin: 0px;
+    text-align: center;
 }

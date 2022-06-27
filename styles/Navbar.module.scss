@@ -5,6 +5,13 @@
     position: fixed;
     background-image: linear-gradient(to right, rgb(54, 54, 54), rgb(41, 40, 40));
     transition: width 200ms ease;
+
+    @media  screen and (max-width: 880px) {
+        bottom: 0;
+        height: 5rem;
+        width: 100%;
+      }
+
 }
 
 .container:hover {
@@ -67,6 +74,7 @@
     color: #B1DAE7;
     font-family: 'Anek Malayalam', sans-serif;
     margin-left: 0.5rem;
+    margin-top: 1.2rem;
 }
 
 .logo {
