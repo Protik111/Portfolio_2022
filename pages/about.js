@@ -3,16 +3,31 @@ import HeadSeo from "../components/HeadSeo";
 import Navbar from "../components/Navbar";
 import Social from "../components/Social";
 import Tilt from "react-parallax-tilt";
+import { useState } from 'react';
+import Education from '../components/Education';
 
 const about = () => {
+    const [tabIndex, setTabIndex] = useState(1);
+
     return (
         <div>
             <HeadSeo title={"ProtikTheDev!"} description={"Protik The Developer"} keywords={"Protik The Developer"}></HeadSeo>
             <Navbar></Navbar>
             <Social></Social>
-            <div className={`${styles.container} container`}>
+            {tabIndex === 1 && <div className={`${styles.container} container`}>
                 <div className={`${styles.details} row`}>
                     <div className={`${styles.textContainer} col-12 col-sm-12 col-md-10 col-lg-5`}>
+                        <div>
+                            <button className={styles.button} onClick={() => setTabIndex(1)}>
+                                About Me
+                            </button>
+                            <button className={styles.button} onClick={() => setTabIndex(2)}>
+                                Education
+                            </button>
+                            <button className={styles.button} onClick={() => setTabIndex(3)}>
+                                Skill
+                            </button>
+                        </div>
                         <h1>
                             Let Me Introduce, Myself.
                         </h1>
@@ -66,7 +81,11 @@ const about = () => {
                         </Tilt>
                     </div>
                 </div>
-            </div>
+            </div>}
+
+            {
+                tabIndex === 2 && <Education setTabIndex={setTabIndex}></Education>
+            }
         </div>
     );
 };

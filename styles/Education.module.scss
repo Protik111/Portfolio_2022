@@ -35,60 +35,58 @@
             line-height: 1.3;
         }
 
-        .wave {
-            animation-name: wave-animation;
-            /* Refers to the name of your @keyframes element below */
-            animation-duration: 2.1s;
-            /* Change to speed up or slow down */
-            animation-iteration-count: infinite;
-            /* Never stop waving :) */
-            transform-origin: 70% 70%;
-            /* Pivot around the bottom-left palm */
-            display: inline-block;
-        }
+        .college2 {
+            display: none;
 
-        @keyframes wave-animation {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            10% {
-                transform: rotate(14deg);
-            }
-
-            /* The following five values can be played with to make the waving more or less extreme */
-            20% {
-                transform: rotate(-8deg);
-            }
-
-            30% {
-                transform: rotate(14deg);
-            }
-
-            40% {
-                transform: rotate(-4deg);
-            }
-
-            50% {
-                transform: rotate(10deg);
-            }
-
-            60% {
-                transform: rotate(0deg);
-            }
-
-            /* Reset for the last half to pause */
-            100% {
-                transform: rotate(0deg);
+            @media screen and (max-width: 880px) {
+                display: block;
             }
         }
+
+        @media screen and (max-width: 880px) {
+            .college {
+                display: none;
+            }
+        }
+
         .aboutDetails {
             font-size: 1.2rem;
+        }
+
+        .eduImg {
+            width: 220px;
+            height: 220px;
+
+            @media screen and (max-width: 880px) {
+                width: 200px;
+                height: 200px;
+            }
+
+            @media screen and (max-width: 600px) {
+                width: 170px;
+                height: 170px;
+            }
+        }
+
+        .eduImg2 {
+            width: 275px;
+            height: 260px;
+
+            @media screen and (max-width: 880px) {
+                width: 243px;
+                height: 228px;
+            }
+
+            @media screen and (max-width: 600px) {
+                width: 190px;
+                height: 180px;
+            }
         }
 
         .skill {
             color: #8c5aa8;
         }
+
         .typeWriter {
             color: #B1DAE7;
             font-size: 2rem;
