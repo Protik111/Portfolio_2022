@@ -9,50 +9,75 @@
     justify-content: center;
     align-items: center;
 
+    @media screen and (max-width: 880px) {
+        height: 100vh;
+    }
+
     .details {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @media screen and (max-width: 880px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            // width: 70%;
+        }
     }
 
     .textContainer {
         color: #B1DAE7;
 
         .wave {
-            animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-            animation-duration: 2.1s; /* Change to speed up or slow down */
-            animation-iteration-count: infinite; /* Never stop waving :) */
-            transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+            animation-name: wave-animation;
+            /* Refers to the name of your @keyframes element below */
+            animation-duration: 2.1s;
+            /* Change to speed up or slow down */
+            animation-iteration-count: infinite;
+            /* Never stop waving :) */
+            transform-origin: 70% 70%;
+            /* Pivot around the bottom-left palm */
             display: inline-block;
-          }
+        }
 
-          @keyframes wave-animation {
+        @keyframes wave-animation {
             0% {
-              transform: rotate(0deg);
+                transform: rotate(0deg);
             }
+
             10% {
-              transform: rotate(14deg);
-            } /* The following five values can be played with to make the waving more or less extreme */
+                transform: rotate(14deg);
+            }
+
+            /* The following five values can be played with to make the waving more or less extreme */
             20% {
-              transform: rotate(-8deg);
+                transform: rotate(-8deg);
             }
+
             30% {
-              transform: rotate(14deg);
+                transform: rotate(14deg);
             }
+
             40% {
-              transform: rotate(-4deg);
+                transform: rotate(-4deg);
             }
+
             50% {
-              transform: rotate(10deg);
+                transform: rotate(10deg);
             }
+
             60% {
-              transform: rotate(0deg);
-            } /* Reset for the last half to pause */
-            100% {
-              transform: rotate(0deg);
+                transform: rotate(0deg);
             }
-          }
-        
+
+            /* Reset for the last half to pause */
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
         .typeWriter {
             color: #B1DAE7;
             font-size: 2rem;
@@ -77,19 +102,19 @@
             transition: all 0.3s ease;
             margin-top: 0.6rem;
         }
-        
+
         .button:focus,
         .button:hover {
             color: #B1DAE7;
             transform: scale(1.1);
         }
-        
+
         .button:focus:after,
         .button:hover:after {
             width: 100%;
             left: 0%;
         }
-        
+
         .button:after {
             content: "";
             pointer-events: none;
@@ -116,10 +141,13 @@
     align-items: center;
 
     @media screen and (max-width: 880px) {
-        width: 100%;
+        margin: 1rem 0;
+        width: 90%;
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 300px;
+        aspect-ratio: 7 / 8;
     }
 }
 
@@ -160,6 +188,5 @@
     font-family: 'Pacifico', cursive;
     font-size: 2em;
     color: #B1DAE7;
-    margin: 0px;
     text-align: center;
 }

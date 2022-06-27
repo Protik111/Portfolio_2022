@@ -2,7 +2,7 @@ import HeadSeo from '../components/HeadSeo';
 import Navbar from '../components/Navbar';
 import Type from '../components/Type';
 import styles from '../styles/Home.module.scss';
-// import 'antd/dist/antd.css';
+import Tilt from "react-parallax-tilt";
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
       <Navbar></Navbar>
       <div className={`${styles.container} container`}>
         <div className={`${styles.details} row`}>
-          <div className={`${styles.textContainer} col-12 col-sm-12 col-md-6 col-lg-7`}>
+          <div className={`${styles.textContainer} col-12 col-sm-12 col-md-12 col-lg-7`}>
             <h1 className="heading">
               Hi There! <span className={styles.wave} role="img" aria-labelledby="wave">👋🏻</span>
             </h1>
@@ -29,15 +29,17 @@ export default function Home() {
             </button>
           </div>
 
-          <div className="col-12 col-sm-12 col-md-5 col-lg-4 offset-lg-1">
-            <div className={styles.profile}>
-              <div className={styles.center}>
-                <div className={styles.white}>
-                  <img className={styles.img} src="/formal-photo.jpg" />
+          <div className="col-12 col-sm-12 col-md-12 col-lg-4 offset-lg-1">
+            <Tilt>
+              <div className={styles.profile}>
+                <div className={styles.center}>
+                  <div className={styles.white}>
+                    <img className={styles.img} src="/formal-photo.jpg" />
+                  </div>
+                  <h3 className={styles.name}>Protik</h3>
                 </div>
-                <h3 className={styles.name}>Protik</h3>
               </div>
-            </div>
+            </Tilt>
           </div>
         </div>
       </div>
