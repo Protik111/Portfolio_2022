@@ -8,6 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
 
     @media screen and (max-width: 880px) {
         height: 100vh;
@@ -30,57 +31,59 @@
 
     .textContainer {
         color: #B1DAE7;
+        // margin-left: 0.5rem;
 
         @media screen and (max-width: 880px) {
             line-height: 1.3;
         }
 
-        .college2 {
-            display: none;
+        .firstRow {
+            display: flex;
+        }
+
+        .firstRow2 {
+            display: flex;
+        }
+
+
+
+        .tech_icons {
+            width: 120px;
+            height: 120px;
+            font-size: 3.5em !important;
+            margin: 10px !important;
+            // padding: 5px !important;
+            opacity: 0.93 !important;
+            border: 1.7px solid rgba(200, 137, 230, 0.637) !important;
+            // vertical-align: middle !important;
+            text-align: center !important;
+            border-radius: 5px !important;
+            display: table !important;
+            box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
+            overflow: hidden !important;
+            transition: all 0.4s ease 0s !important;
 
             @media screen and (max-width: 880px) {
-                display: block;
+                width: 100px;
+                height: 100px;
+                margin: 3px !important;
+                font-size: 1.5rem;
             }
         }
 
-        @media screen and (max-width: 880px) {
-            .college {
-                display: none;
-            }
+        .tech_icons:hover {
+            transform: scale(1.05) !important;
+            overflow: hidden !important;
+            border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
         }
+
+        // .tech-icon-images {
+        //     padding: 20px !important;
+        //     line-height: 1.6 !important;
+        // }
 
         .aboutDetails {
             font-size: 1.2rem;
-        }
-
-        .eduImg {
-            width: 220px;
-            height: 220px;
-
-            @media screen and (max-width: 880px) {
-                width: 200px;
-                height: 200px;
-            }
-
-            @media screen and (max-width: 600px) {
-                width: 170px;
-                height: 170px;
-            }
-        }
-
-        .eduImg2 {
-            width: 275px;
-            height: 260px;
-
-            @media screen and (max-width: 880px) {
-                width: 243px;
-                height: 228px;
-            }
-
-            @media screen and (max-width: 600px) {
-                width: 190px;
-                height: 180px;
-            }
         }
 
         .skill {
@@ -110,7 +113,7 @@
             border-radius: 0.5rem;
             transition: all 0.3s ease;
             margin-right: 0.9rem;
-            // margin-top: 0.5rem;
+            margin-top: 0.5rem;
         }
 
         .button:focus,
@@ -137,6 +140,14 @@
             transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
             transition-duration: 400ms;
             transition-property: width, left;
+        }
+    }
+
+    .textContainer2 {
+        margin-top: 3.8rem;
+
+        @media screen and (max-width: 880px) {
+            margin-top: 0;
         }
     }
 }

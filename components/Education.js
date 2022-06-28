@@ -19,9 +19,9 @@ const Education = ({ setTabIndex }) => {
                             </button>
                         </div>
 
-                        <div className="mt-2">
+                        <Tilt className="mt-2">
                             <img className={styles.eduImg} src="/Aiub.png" alt="" />
-                        </div>
+                        </Tilt>
                         <div className="">
                             <div>
                                 <h4>American International University-Bangladesh</h4>
@@ -43,18 +43,10 @@ const Education = ({ setTabIndex }) => {
                                 <p><bold>2014-2016</bold></p>
                             </div>
                         </div>
-                        <div className="">
+                        <Tilt className="">
                             <img className={styles.eduImg2} src="/baf.png" alt="" />
-                        </div>
-                        <div className={styles.college2}>
-                            <div>
-                                <h4>BAF Shaheen College, Dhaka</h4>
-                            </div>
-                            <div>
-                                <h6>Higher Secondary School Certificate</h6>
-                                <p><bold>2014-2016</bold></p>
-                            </div>
-                        </div>
+                        </Tilt>
+                        
                     </div>
                 </div>
 

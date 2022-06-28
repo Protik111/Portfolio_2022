@@ -5,6 +5,7 @@ import Social from "../components/Social";
 import Tilt from "react-parallax-tilt";
 import { useState } from 'react';
 import Education from '../components/Education';
+import Skills from '../components/Skills';
 
 const about = () => {
     const [tabIndex, setTabIndex] = useState(1);
@@ -28,7 +29,7 @@ const about = () => {
                                 Skill
                             </button>
                         </div>
-                        <h1>
+                        <h1 className="mt-1">
                             Let Me Introduce, Myself.
                         </h1>
                         <p className={styles.aboutDetails}>
@@ -85,6 +86,10 @@ const about = () => {
 
             {
                 tabIndex === 2 && <Education setTabIndex={setTabIndex}></Education>
+            }
+
+            {
+                tabIndex === 3 && <Skills setTabIndex={setTabIndex}></Skills>
             }
         </div>
     );
