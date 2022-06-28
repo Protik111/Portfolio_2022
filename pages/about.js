@@ -9,7 +9,7 @@ import Skills from '../components/Skills';
 
 const about = () => {
     const [tabIndex, setTabIndex] = useState(1);
-
+    const [active, setActive] = useState("about")
     return (
         <div>
             <HeadSeo title={"ProtikTheDev!"} description={"Protik The Developer"} keywords={"Protik The Developer"}></HeadSeo>
@@ -19,13 +19,22 @@ const about = () => {
                 <div className={`${styles.details} row`}>
                     <div className={`${styles.textContainer} col-12 col-sm-12 col-md-10 col-lg-5`}>
                         <div>
-                            <button className={styles.button} onClick={() => setTabIndex(1)}>
+                            <button className={`${styles.button} ${active === 'about' ? styles.active : styles.button}`} onClick={() => {
+                                setTabIndex(1);
+                                setActive("about");
+                                }}>
                                 About Me
                             </button>
-                            <button className={styles.button} onClick={() => setTabIndex(2)}>
+                            <button className={styles.button} onClick={() => {
+                                setTabIndex(2);
+                                setActive("education")
+                                }}>
                                 Education
                             </button>
-                            <button className={styles.button} onClick={() => setTabIndex(3)}>
+                            <button className={styles.button} onClick={() => {
+                                setTabIndex(3);
+                                setActive("skill")
+                                }}>
                                 Skill
                             </button>
                         </div>
@@ -85,11 +94,11 @@ const about = () => {
             </div>}
 
             {
-                tabIndex === 2 && <Education setTabIndex={setTabIndex}></Education>
+                tabIndex === 2 && <Education setTabIndex={setTabIndex} active={active} setActive={setActive}></Education>
             }
 
             {
-                tabIndex === 3 && <Skills setTabIndex={setTabIndex}></Skills>
+                tabIndex === 3 && <Skills setTabIndex={setTabIndex} active={active} setActive={setActive}></Skills>
             }
         </div>
     );

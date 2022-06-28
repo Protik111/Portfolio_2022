@@ -71,9 +71,11 @@
         }
 
         .button:focus,
+        .active,
         .button:hover {
             color: #B1DAE7;
             transform: scale(1.1);
+            border-bottom: 2px solid #B1DAE7;
         }
 
         .button:focus:after,

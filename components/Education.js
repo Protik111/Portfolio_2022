@@ -1,20 +1,29 @@
 import styles from '../styles/Education.module.scss';
 import Tilt from "react-parallax-tilt";
 
-const Education = ({ setTabIndex }) => {
+const Education = ({ setTabIndex, active, setActive }) => {
     return (
         <div>
             <div className={`${styles.container} container`}>
                 <div className={`${styles.details} row`}>
                     <div className={`${styles.textContainer} col-12 col-sm-12 col-md-10 col-lg-7`}>
                         <div>
-                            <button className={styles.button} onClick={() => setTabIndex(1)}>
+                            <button className={`${styles.button}`} onClick={() => {
+                                setTabIndex(1);
+                                setActive("about");
+                            }}>
                                 About Me
                             </button>
-                            <button className={styles.button} onClick={() => setTabIndex(2)}>
+                            <button className={`${styles.button} ${active === 'education' ? styles.active : styles.button}`} onClick={() => {
+                                setTabIndex(2);
+                                setActive("education")
+                            }}>
                                 Education
                             </button>
-                            <button className={styles.button} onClick={() => setTabIndex(3)}>
+                            <button className={styles.button} onClick={() => {
+                                setTabIndex(3);
+                                setActive("skill")
+                            }}>
                                 Skill
                             </button>
                         </div>
@@ -46,7 +55,7 @@ const Education = ({ setTabIndex }) => {
                         <Tilt className="">
                             <img className={styles.eduImg2} src="/baf.png" alt="" />
                         </Tilt>
-                        
+
                     </div>
                 </div>
 
