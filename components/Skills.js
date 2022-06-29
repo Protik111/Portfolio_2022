@@ -1,14 +1,11 @@
-import { CgCPlusPlus } from "react-icons/cg";
 import styles from '../styles/Skills.module.scss';
 import {
-    DiJavascript1,
-    DiReact,
     DiNodejs,
     DiMongodb,
     DiBootstrap,
     DiHtml5,
     DiGit,
-    DiCss3
+    DiSass
 } from "react-icons/di";
 import { SiFirebase, SiNextdotjs, SiRedux, SiTypescript, SiJavascript, SiReact } from "react-icons/si";
 
@@ -94,7 +91,7 @@ const Skills = ({ setTabIndex, active, setActive }) => {
                                     <DiBootstrap />
                                 </div>
                                 <div className={styles.tech_icons}>
-                                    <DiCss3 />
+                                    <DiSass />
                                 </div>
                             </div>
                         </div>

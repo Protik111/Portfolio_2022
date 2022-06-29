@@ -107,7 +107,17 @@
     font-family: 'Anek Malayalam', sans-serif;
     margin-left: 0.5rem;
     margin-top: 1.2rem;
+
+    @media screen and (max-width: 880px) {
+        display: none;
+    }
 }
+
+// @media screen and (max-width: 880px) {
+//     .link_text {
+//         display: none;
+//     }
+// }
 
 .logo {
     width: 100%;

@@ -56,6 +56,16 @@ const Education = ({ setTabIndex, active, setActive }) => {
                             <img className={styles.eduImg2} src="/baf.png" alt="" />
                         </Tilt>
 
+                        <div className={styles.college2}>
+                            <div>
+                                <h4>BAF Shaheen College, Dhaka</h4>
+                            </div>
+                            <div>
+                                <h6>Higher Secondary School Certificate</h6>
+                                <p><bold>2014-2016</bold></p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
