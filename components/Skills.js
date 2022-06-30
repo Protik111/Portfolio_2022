@@ -7,7 +7,7 @@ import {
     DiGit,
     DiSass
 } from "react-icons/di";
-import { SiFirebase, SiNextdotjs, SiRedux, SiTypescript, SiJavascript, SiReact } from "react-icons/si";
+import { SiFirebase, SiNextdotjs, SiRedux, SiTypescript, SiJavascript, SiReact, SiExpress } from "react-icons/si";
 
 const Skills = ({ setTabIndex, active, setActive }) => {
     return (
@@ -55,7 +55,7 @@ const Skills = ({ setTabIndex, active, setActive }) => {
                             <br></br>
                             <div className={styles.firstRow}>
                                 <div className={styles.tech_icons}>
-                                    <SiTypescript />
+                                    <SiExpress />
                                 </div>
                                 <div className={styles.tech_icons}>
                                     <SiNextdotjs />

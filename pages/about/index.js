@@ -1,11 +1,11 @@
-import styles from '../styles/About.module.scss';
-import HeadSeo from "../components/HeadSeo";
-import Navbar from "../components/Navbar";
-import Social from "../components/Social";
+import styles from '../../styles/About.module.scss';
+import Navbar from "../../components/Navbar";
+import Social from "../../components/Social";
+import HeadSeo from "../../components/HeadSeo";
 import Tilt from "react-parallax-tilt";
 import { useState } from 'react';
-import Education from '../components/Education';
-import Skills from '../components/Skills';
+import Education from '../../components/Education';
+import Skills from '../../components/Skills';
 
 const about = () => {
     const [tabIndex, setTabIndex] = useState(1);
