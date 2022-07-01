@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@300;400;500;600&family=League+Gothic&display=swap');
 
+.noScroll {
+    overflow: hidden;
+    height: 100%;
+}
+
 .container {
     height: 105vh;
     // margin-left: 15rem;
