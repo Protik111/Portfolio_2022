@@ -3,7 +3,7 @@ import { AiFillHome } from 'react-icons/ai';
 import { FiCode } from 'react-icons/fi';
 import { BsFillPenFill, BsFillPersonFill } from 'react-icons/bs';
 import { MdEmail, MdDoubleArrow } from 'react-icons/md';
-
+import Link from 'next/link';
 
 const Navbar = () => {
     return (
@@ -17,24 +17,30 @@ const Navbar = () => {
                 </li>
 
                 <li className={`${styles.nav_link} ${styles.button}`}>
-                    <a href="#" className={styles.nav_link} id={styles.nav_linkid}>
-                        <AiFillHome className={styles.icon} size={32}></AiFillHome>
-                        <p className={styles.link_text}>Home</p>
-                    </a>
+                    <Link href="/">
+                        <a href="#" className={styles.nav_link} id={styles.nav_linkid}>
+                            <AiFillHome className={styles.icon} size={32}></AiFillHome>
+                            <p className={styles.link_text}>Home</p>
+                        </a>
+                    </Link>
                 </li>
 
                 <li className={`${styles.nav_link} ${styles.button}`}>
-                    <a href="#" className={styles.nav_link}>
-                        <BsFillPersonFill className={styles.icon} size={32}></BsFillPersonFill>
-                        <p className={styles.link_text}>About</p>
-                    </a>
+                    <Link href="/about">
+                        <a href="#" className={styles.nav_link}>
+                            <BsFillPersonFill className={styles.icon} size={32}></BsFillPersonFill>
+                            <p className={styles.link_text}>About</p>
+                        </a>
+                    </Link>
                 </li>
 
                 <li className={`${styles.nav_link} ${styles.button}`}>
-                    <a href="#" className={styles.nav_link}>
-                        <FiCode className={styles.icon} size={32}></FiCode>
-                        <p className={styles.link_text}>Works</p>
-                    </a>
+                    <Link href="/works">
+                        <a href="#" className={styles.nav_link}>
+                            <FiCode className={styles.icon} size={32}></FiCode>
+                            <p className={styles.link_text}>Works</p>
+                        </a>
+                    </Link>
                 </li>
 
                 <li className={`${styles.nav_link} ${styles.button}`}>

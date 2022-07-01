@@ -2,14 +2,17 @@
     box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
     color: #B1DAE7;
     background-color: transparent !important;
-    opacity: 0.9 !important;
+    // opacity: 0.9 !important;
     transition: all 0.3s ease 0s !important;
-    height: 170px;
-    margin: 15px;
+    height: 185px;
+    margin: 10px;
     cursor: pointer;
     text-align: center;
     overflow: hidden;
     padding: 10px;
+    position: relative;
+    overflow: hidden;
+    line-height: 0.2;
 
     &:hover {
         transform: scale(1.05) !important;
@@ -17,9 +20,10 @@
         box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
     }
     .projectImg {
-        width: 60%;
-        height: 20%;
-        border-radius: 1rem;
+        width: 55%;
+        height: 70px;
+        border-radius: 0.5rem;
+        z-index: 1000;
     }
 
     .courseDesc {
@@ -28,9 +32,65 @@
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 4;
         line-height: 1.2;
+        z-index: 1000;
     }
 
     .genre_btn {
         margin: 0 5px;
     }
+
+    .button {
+        cursor: pointer;
+        position: relative;
+        border: none;
+        background: none;
+        transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+        transition-duration: 200ms;
+        transition-property: color;
+        color: white;
+        background-image: linear-gradient(180deg, var(--nav-primary1) 0%, var(--nav-primary2) 99%);
+        padding: 0.8rem 2rem;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+        margin-right: 0.9rem;
+        margin-top: 0.5rem;
+
+        a {
+            text-decoration: none;
+            color: white;
+
+            &:hover {
+                color: #B1DAE7;
+            }
+        }
+    }
+
+    .button:focus,
+    .active,
+    .button:hover {
+        color: #B1DAE7;
+        transform: scale(1.1);
+        border-bottom: 2px solid #B1DAE7;
+    }
+
+    .button:focus:after,
+    .button:hover:after {
+        width: 100%;
+        left: 0%;
+    }
+
+    .button:after {
+        content: "";
+        pointer-events: none;
+        bottom: -2px;
+        left: 50%;
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        background-color: #B1DAE7;
+        transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+        transition-duration: 400ms;
+        transition-property: width, left;
+    }
 }
+

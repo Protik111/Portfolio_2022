@@ -4,7 +4,7 @@ import Navbar from '../../components/Navbar';
 import Social from '../../components/Social';
 import styles from '../../styles/Works.module.scss';
 import Tilt from "react-parallax-tilt";
-import course from '../../assets/project';
+import project from '../../assets/project';
 import ProjectCard from '../../components/ProjectCard';
 
 const Works = () => {
@@ -27,10 +27,7 @@ const Works = () => {
                         }}>
                             Projects
                         </button>
-                        <button className={styles.button} onClick={() => {
-                            setTabIndex(2);
-                            setActive("research")
-                        }}>
+                        <button className={styles.button} onClick={() => alert("Not Added!")}>
                             Research
                         </button>
                     </div>
@@ -42,7 +39,7 @@ const Works = () => {
                     </div>
 
                     {
-                        course.map(singleproject => <ProjectCard key={singleproject.id} singleproject={singleproject}></ProjectCard>)
+                        project.map(singleproject => <ProjectCard key={singleproject.id} singleproject={singleproject}></ProjectCard>)
                     }
                 </div>
             </div >}

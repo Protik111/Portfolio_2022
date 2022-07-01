@@ -1,15 +1,18 @@
 import React from 'react';
 import styles from '../styles/ProjectCard.module.scss';
+import { BiLinkExternal, BiCode } from 'react-icons/bi';
 
 const ProjectCard = ({ singleproject }) => {
     const { imgPath, isBlog, title, description, link, fgithub, bgithub, both, stack } = singleproject;
+
+    console.log(fgithub)
     return (
         <div className={`${styles.projectCard} col-md-3`}>
             <div>
                 <img className={styles.projectImg} src={imgPath}></img>
             </div>
             <div className="mt-2">
-                <h4>{title}</h4>
+                <h5>{title}</h5>
             </div>
             {/* <p className={styles.courseDesc}>{description}</p> */}
             {
@@ -21,11 +24,19 @@ const ProjectCard = ({ singleproject }) => {
                             className={styles.genre_btn}
                             onClick={() => genreSelectionHandler(genre.id)}
                         >
-                        <Icon size={25}/>
+                            <Icon size={20} />
                         </span>
                     )
                 })
             }
+            <div className={styles.btncontainer}>
+                <button className={styles.button} >
+                    <a href={link} target="_blank">Live</a>
+                </button>
+                <button className={`${styles.button}`}>
+                    <a href={fgithub} target="_blank">Code</a>
+                </button>
+            </div>
         </div>
     );
 };
