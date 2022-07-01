@@ -7,15 +7,25 @@ import {
     DiGit,
     DiSass
 } from "react-icons/di";
-import { SiFirebase, SiNextdotjs, SiRedux, SiTypescript, SiJavascript, SiReact, SiExpress } from "react-icons/si";
+import { SiFirebase, SiNextdotjs, SiRedux, SiJavascript, SiReact, SiExpress } from "react-icons/si";
+import { useEffect } from 'react';
+import AOS from 'aos';
 
 const Skills = ({ setTabIndex, active, setActive }) => {
+    useEffect(() => {
+        AOS.init({
+            offset: 200,
+            duration: 400,
+            easing: 'ease-in-sine',
+            delay: 100,
+        });
+    }, []);
     return (
         <div>
             <div className={`${styles.container} container`}>
                 <div className={`${styles.container} container ms-lg-4`}>
                     <div className={`${styles.details} row`}>
-                        <div className={`${styles.textContainer} col-12 col-sm-12 col-md-10 col-lg-6`}>
+                        <div className={`${styles.textContainer} col-12 col-sm-12 col-md-10 col-lg-6`} data-aos="flip-left">
                             <div>
                                 <button className={`${styles.button}`} onClick={() => {
                                     setTabIndex(1);
@@ -67,7 +77,7 @@ const Skills = ({ setTabIndex, active, setActive }) => {
 
                         </div>
 
-                        <div className={`${styles.textContainer} ${styles.textContainer2} col-12 col-sm-12 col-md-10 col-lg-6`}>
+                        <div className={`${styles.textContainer} ${styles.textContainer2} col-12 col-sm-12 col-md-10 col-lg-6`} data-aos="flip-right">
                             <div className="">
                                 <h2>Databases & Others</h2>
                             </div>

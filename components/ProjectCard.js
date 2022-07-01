@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from '../styles/ProjectCard.module.scss';
-import { BiLinkExternal, BiCode } from 'react-icons/bi';
+import AOS from 'aos';
 
 const ProjectCard = ({ singleproject }) => {
     const { imgPath, isBlog, title, description, link, fgithub, bgithub, both, stack } = singleproject;
 
+    useEffect(() => {
+        AOS.init({
+            offset: 200,
+            duration: 400,
+            easing: 'ease-in-sine',
+            delay: 100,
+        });
+    }, []);
+
     return (
-        <div className={`${styles.projectCard} col-md-4 col-lg-3`}>
+        <div className={`${styles.projectCard} col-md-4 col-lg-3`} data-aos="zoom-out">
             <div>
                 <img className={styles.projectImg} src={imgPath}></img>
             </div>

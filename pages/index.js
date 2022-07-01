@@ -5,8 +5,18 @@ import styles from '../styles/Home.module.scss';
 import Tilt from "react-parallax-tilt";
 import Social from '../components/Social';
 import Link from 'next/link';
+import { useEffect } from 'react';
+import AOS from 'aos';
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({
+        offset: 200,
+        duration: 400,
+        easing: 'ease-in-sine',
+        delay: 100,
+    });
+}, []);
   return (
     <div>
       <HeadSeo title={"ProtikTheDev!"} description={"Protik The Developer"} keywords={"Protik The Developer"}></HeadSeo>
@@ -14,7 +24,7 @@ export default function Home() {
       <Social></Social>
       <div className={`${styles.container} container`}>
         <div className={`${styles.details} row`}>
-          <div className={`${styles.textContainer} col-12 col-sm-12 col-md-12 col-lg-7`}>
+          <div className={`${styles.textContainer} col-12 col-sm-12 col-md-12 col-lg-7`} data-aos="zoom-in-right">
             <h1 className="heading">
               Hi There! <span className={styles.wave} role="img" aria-labelledby="wave">👋🏻</span>
             </h1>
@@ -34,7 +44,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="col-12 col-sm-12 col-md-12 col-lg-4 offset-lg-1">
+          <div className="col-12 col-sm-12 col-md-12 col-lg-4 offset-lg-1" data-aos="zoom-in-left">
             <Tilt>
               <div className={styles.profile}>
                 <div className={styles.center}>

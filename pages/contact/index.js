@@ -5,6 +5,8 @@ import HeadSeo from "../../components/HeadSeo";
 import emailjs from "emailjs-com";
 import { AiOutlineSend } from 'react-icons/ai';
 import { NotificationContainer, NotificationManager } from 'react-notifications';
+import { useEffect } from 'react';
+import AOS from 'aos';
 
 const Contact = () => {
 
@@ -36,12 +38,21 @@ const Contact = () => {
         e.target.reset()
     }
 
+    useEffect(() => {
+        AOS.init({
+            offset: 200,
+            duration: 400,
+            easing: 'ease-in-sine',
+            delay: 100,
+        });
+    }, []);
+
     return (
         <div>
             <HeadSeo title={"ProtikTheDev!"} description={"Protik The Developer"} keywords={"Protik The Developer"}></HeadSeo>
             <Navbar></Navbar>
             <Social></Social>
-            <div className={`${styles.container} container`}>
+            <div className={`${styles.container} container`} data-aos="zoom-out">
                 <div className={`${styles.contactContainer} row`}>
                     <div className={styles.contactTitle}>
                         <h3>Feel Free To Contact.</h3>

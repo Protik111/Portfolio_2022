@@ -1,12 +1,22 @@
 import styles from '../styles/Education.module.scss';
 import Tilt from "react-parallax-tilt";
+import { useEffect } from 'react';
+import AOS from 'aos';
 
 const Education = ({ setTabIndex, active, setActive }) => {
+    useEffect(() => {
+        AOS.init({
+            offset: 200,
+            duration: 400,
+            easing: 'ease-in-sine',
+            delay: 100,
+        });
+    }, []);
     return (
         <div>
             <div className={`${styles.container} container`}>
                 <div className={`${styles.details} row`}>
-                    <div className={`${styles.textContainer} col-12 col-sm-12 col-md-10 col-lg-7`}>
+                    <div className={`${styles.textContainer} col-12 col-sm-12 col-md-10 col-lg-7`} data-aos="flip-left">
                         <div>
                             <button className={`${styles.button}`} onClick={() => {
                                 setTabIndex(1);
@@ -42,7 +52,7 @@ const Education = ({ setTabIndex, active, setActive }) => {
                         </div>
                     </div>
 
-                    <div className={`${styles.textContainer} col-12 col-sm-12 col-md-10 col-lg-5`}>
+                    <div className={`${styles.textContainer} col-12 col-sm-12 col-md-10 col-lg-5`} data-aos="flip-right">
                         <div className={styles.college}>
                             <div>
                                 <h4>BAF Shaheen College, Dhaka</h4>

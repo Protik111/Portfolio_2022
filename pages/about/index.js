@@ -3,13 +3,23 @@ import Navbar from "../../components/Navbar";
 import Social from "../../components/Social";
 import HeadSeo from "../../components/HeadSeo";
 import Tilt from "react-parallax-tilt";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Education from '../../components/Education';
 import Skills from '../../components/Skills';
+import AOS from 'aos';
 
 const about = () => {
     const [tabIndex, setTabIndex] = useState(1);
-    const [active, setActive] = useState("about")
+    const [active, setActive] = useState("about");
+
+    useEffect(() => {
+        AOS.init({
+            offset: 200,
+            duration: 400,
+            easing: 'ease-in-sine',
+            delay: 100,
+        });
+    }, []);
     return (
         <div>
             <HeadSeo title={"ProtikTheDev!"} description={"Protik The Developer"} keywords={"Protik The Developer"}></HeadSeo>
@@ -17,7 +27,7 @@ const about = () => {
             <Social></Social>
             {tabIndex === 1 && <div className={`${styles.container} container`}>
                 <div className={`${styles.details} row`}>
-                    <div className={`${styles.textContainer} col-12 col-sm-12 col-md-10 col-lg-5`}>
+                    <div className={`${styles.textContainer} col-12 col-sm-12 col-md-10 col-lg-5`} data-aos="flip-left">
                         <div>
                             <button className={`${styles.button} ${active === 'about' ? styles.active : styles.button}`} onClick={() => {
                                 setTabIndex(1);
@@ -78,7 +88,7 @@ const about = () => {
                         </p>
                     </div>
 
-                    <div className="col-12 col-sm-12 col-md-10 col-lg-3">
+                    <div className="col-12 col-sm-12 col-md-10 col-lg-3" data-aos="flip-right">
                         <Tilt>
                             <div className={styles.profile}>
                                 <div className={styles.center}>
