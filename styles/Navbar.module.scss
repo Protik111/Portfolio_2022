@@ -4,6 +4,7 @@
     position: fixed;
     background-image: linear-gradient(to right, rgb(54, 54, 54), rgb(41, 40, 40));
     transition: width 200ms ease;
+    z-index: 2000;
 }
 
 @media screen and (max-width: 880px) {

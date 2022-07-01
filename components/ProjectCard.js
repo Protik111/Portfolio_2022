@@ -5,14 +5,13 @@ import { BiLinkExternal, BiCode } from 'react-icons/bi';
 const ProjectCard = ({ singleproject }) => {
     const { imgPath, isBlog, title, description, link, fgithub, bgithub, both, stack } = singleproject;
 
-    console.log(fgithub)
     return (
-        <div className={`${styles.projectCard} col-md-3`}>
+        <div className={`${styles.projectCard} col-md-4 col-lg-3`}>
             <div>
                 <img className={styles.projectImg} src={imgPath}></img>
             </div>
             <div className="mt-2">
-                <h5>{title}</h5>
+                <h5 className={styles.title}>{title}</h5>
             </div>
             {/* <p className={styles.courseDesc}>{description}</p> */}
             {
