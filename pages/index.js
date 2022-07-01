@@ -4,6 +4,7 @@ import Type from '../components/Type';
 import styles from '../styles/Home.module.scss';
 import Tilt from "react-parallax-tilt";
 import Social from '../components/Social';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -26,9 +27,11 @@ export default function Home() {
             <div className={styles.typeWriter}>
               <Type />
             </div>
-            <button className={styles.button}>
-              See My Works
-            </button>
+            <Link href="/works">
+              <button className={styles.button}>
+                See My Works
+              </button>
+            </Link>
           </div>
 
           <div className="col-12 col-sm-12 col-md-12 col-lg-4 offset-lg-1">

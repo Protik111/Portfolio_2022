@@ -86,6 +86,11 @@
     transition: 600ms;
 }
 
+.activeN {
+    height: 5.3rem;
+    width: 100%;
+    background-color: #6b507e;
+}
 .nav_link:hover {
     filter: grayscale(0%) opacity(1);
     background: #6b507e;
