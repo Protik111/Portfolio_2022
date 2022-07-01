@@ -5,10 +5,21 @@ import Social from '../../components/Social';
 import styles from '../../styles/Works.module.scss';
 import project from '../../assets/project';
 import ProjectCard from '../../components/ProjectCard';
+import { NotificationContainer, NotificationManager } from 'react-notifications';
 
 const Works = () => {
     const [tabIndex, setTabIndex] = useState(1);
     const [active, setActive] = useState("projects");
+
+    const createNotification = (type) => {
+        return () => {
+            switch (type) {
+                case 'info':
+                    NotificationManager.info('Research Comming Soon!', 'Close after 3000ms', 3000);
+                    break;
+            }
+        };
+    };
 
     return (
         <div>
@@ -26,7 +37,7 @@ const Works = () => {
                         }}>
                             Projects
                         </button>
-                        <button className={styles.button} onClick={() => alert("Not Added!")}>
+                        <button className={styles.button} onClick={createNotification('info')}>
                             Research
                         </button>
                     </div>
@@ -43,6 +54,7 @@ const Works = () => {
                         }
                     </div>
                 </section>
+                    <NotificationContainer />
             </div >}
         </div >
     );

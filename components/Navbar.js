@@ -44,17 +44,19 @@ const Navbar = () => {
                 </li>
 
                 <li className={`${styles.nav_link} ${styles.button}`}>
-                    <a href="#" className={styles.nav_link}>
+                    <a href="https://medium.com/@rafiurrahmanprotik" target="_blank" className={styles.nav_link}>
                         <BsFillPenFill className={styles.icon} size={32}></BsFillPenFill>
                         <p className={styles.link_text}>Blogs</p>
                     </a>
                 </li>
 
                 <li className={`${styles.nav_link} ${styles.button}`}>
-                    <a href="#" className={styles.nav_link}>
-                        <MdEmail className={styles.icon} size={32}></MdEmail>
-                        <p className={styles.link_text}>Mail</p>
-                    </a>
+                    <Link href="/contact">
+                        <a href="#" className={styles.nav_link}>
+                            <MdEmail className={styles.icon} size={32}></MdEmail>
+                            <p className={styles.link_text}>Contact</p>
+                        </a>
+                    </Link>
                 </li>
             </ul>
         </nav>
