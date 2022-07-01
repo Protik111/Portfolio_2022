@@ -15,7 +15,7 @@ const Works = () => {
         return () => {
             switch (type) {
                 case 'info':
-                    NotificationManager.info('Research Comming Soon!', 'Close after 3000ms', 3000);
+                    NotificationManager.info('Research Comming Soon!');
                     break;
             }
         };
