@@ -10,19 +10,22 @@
     align-items: center;
     overflow-y: scroll;
 
-    @media screen and (max-width: 880px) {
-        min-height: 100vh;
-    }
+    // @media screen and (max-width: 880px) {
+    //     min-height: 100vh;
+    //     height: -webkit-fill-available;
+    //     overflow: scroll;
+    // }
 
     .cardContainer {
         margin-left: 15rem;
         color: #B1DAE7;
 
         @media screen and (max-width: 880px) {
-            height: 100vh;
+            // height: 100vh;
             overflow: scroll;
             margin-left: 0;
             height: -webkit-fill-available;
+            margin-top: 1rem;
         }
 
         .project_heading {
