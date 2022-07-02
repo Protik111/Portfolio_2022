@@ -15,7 +15,7 @@
     align-items: center;
 
     @media screen and (max-width: 880px) {
-        height: 100vh;
+        min-height: 105vh;
     }
 
     .details {
