@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@300;400;500;600&family=League+Gothic&display=swap');
 
 .container {
-    height: 105vh;
+    min-height: 125vh;
     // margin-left: 15rem;
     min-width: 100%;
     background-color: #181838;
@@ -18,7 +18,7 @@
         color: #B1DAE7;
 
         @media screen and (max-width: 880px) {
-            height: calc(100% - 20rem);
+            min-height: calc(100% - 20rem);
             margin-left: 0;
             overflow-y: scroll;
             padding-bottom: 0.5rem;
