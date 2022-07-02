@@ -25,7 +25,7 @@ const Skills = ({ setTabIndex, active, setActive }) => {
             <div className={`${styles.container} container`}>
                 <div className={`${styles.container} container ms-lg-4`}>
                     <div className={`${styles.details} row`}>
-                        <div className={`${styles.textContainer} col-12 col-sm-12 col-md-10 col-lg-6`} data-aos="flip-left">
+                        <div className={`${styles.textContainer} col-12 col-sm-12 col-md-10 col-lg-6`} data-aos="fade-right">
                             <div>
                                 <button className={`${styles.button}`} onClick={() => {
                                     setTabIndex(1);
@@ -77,7 +77,7 @@ const Skills = ({ setTabIndex, active, setActive }) => {
 
                         </div>
 
-                        <div className={`${styles.textContainer} ${styles.textContainer2} col-12 col-sm-12 col-md-10 col-lg-6`} data-aos="flip-right">
+                        <div className={`${styles.textContainer} ${styles.textContainer2} col-12 col-sm-12 col-md-10 col-lg-6`} data-aos="fade-left">
                             <div className="">
                                 <h2>Databases & Others</h2>
                             </div>

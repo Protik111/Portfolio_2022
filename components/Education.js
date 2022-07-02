@@ -16,7 +16,7 @@ const Education = ({ setTabIndex, active, setActive }) => {
         <div>
             <div className={`${styles.container} container`}>
                 <div className={`${styles.details} row`}>
-                    <div className={`${styles.textContainer} col-12 col-sm-12 col-md-10 col-lg-7`} data-aos="flip-left">
+                    <div className={`${styles.textContainer} col-12 col-sm-12 col-md-10 col-lg-7`} data-aos="fade-right">
                         <div>
                             <button className={`${styles.button}`} onClick={() => {
                                 setTabIndex(1);
@@ -52,7 +52,7 @@ const Education = ({ setTabIndex, active, setActive }) => {
                         </div>
                     </div>
 
-                    <div className={`${styles.textContainer} col-12 col-sm-12 col-md-10 col-lg-5`} data-aos="flip-right">
+                    <div className={`${styles.textContainer} col-12 col-sm-12 col-md-10 col-lg-5`} data-aos="fade-left">
                         <div className={styles.college}>
                             <div>
                                 <h4>BAF Shaheen College, Dhaka</h4>

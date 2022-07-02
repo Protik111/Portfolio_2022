@@ -27,7 +27,7 @@ const about = () => {
             <Social></Social>
             {tabIndex === 1 && <div className={`${styles.container} container`}>
                 <div className={`${styles.details} row`}>
-                    <div className={`${styles.textContainer} col-12 col-sm-12 col-md-10 col-lg-5`} data-aos="flip-left">
+                    <div className={`${styles.textContainer} col-12 col-sm-12 col-md-10 col-lg-5`} data-aos="fade-right">
                         <div>
                             <button className={`${styles.button} ${active === 'about' ? styles.active : styles.button}`} onClick={() => {
                                 setTabIndex(1);
@@ -88,7 +88,7 @@ const about = () => {
                         </p>
                     </div>
 
-                    <div className="col-12 col-sm-12 col-md-10 col-lg-3" data-aos="flip-right">
+                    <div className="col-12 col-sm-12 col-md-10 col-lg-3" data-aos="fade-left">
                         <Tilt>
                             <div className={styles.profile}>
                                 <div className={styles.center}>
