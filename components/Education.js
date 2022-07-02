@@ -39,7 +39,7 @@ const Education = ({ setTabIndex, active, setActive }) => {
                         </div>
 
                         <Tilt className="mt-2">
-                            <img className={styles.eduImg} src="/Aiub.png" alt="" />
+                            <img className={styles.eduImg} src="./Aiub.png" alt="" />
                         </Tilt>
                         <div className="">
                             <div>
@@ -63,7 +63,7 @@ const Education = ({ setTabIndex, active, setActive }) => {
                             </div>
                         </div>
                         <Tilt className="">
-                            <img className={styles.eduImg2} src="/baf.png" alt="" />
+                            <img className={styles.eduImg2} src="./baf.png" alt="" />
                         </Tilt>
 
                         <div className={styles.college2}>
