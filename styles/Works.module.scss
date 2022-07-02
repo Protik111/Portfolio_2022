@@ -18,8 +18,8 @@
         color: #B1DAE7;
 
         @media screen and (max-width: 880px) {
-            height: 150vh;
-            // overflow: scroll;
+            height: 100vh;
+            overflow: scroll;
             margin-left: 0;
             height: -webkit-fill-available;
         }
