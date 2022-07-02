@@ -17,18 +17,25 @@
         margin-left: 15rem;
         color: #B1DAE7;
 
+        @media screen and (max-width: 880px) {
+            height: 150vh;
+            // overflow: scroll;
+            margin-left: 0;
+            height: -webkit-fill-available;
+        }
+
         .project_heading {
             @media screen and (max-width: 880px) {
                 display: none;
             }
         }
 
-        @media screen and (max-width: 880px) {
-            min-height: 100vh;
-            margin-left: 0;
-            overflow-y: scroll;
-            // padding-bottom: 0.5rem;
-        }
+        // @media screen and (max-width: 880px) {
+        //     min-height: 200vh;
+        //     margin-left: 0;
+        //     overflow-y: scroll;
+        //     // padding-bottom: 0.5rem;
+        // }
 
         .btnContainer {
             @media screen and (max-width: 880px) {
@@ -77,12 +84,12 @@
         // margin-top: 0.5rem;
     }
 
-        .active,
-        .button:hover {
-            color: #B1DAE7;
-            transform: scale(1.1);
-            border-bottom: 2px solid #B1DAE7;
-        }
+    .active,
+    .button:hover {
+        color: #B1DAE7;
+        transform: scale(1.1);
+        border-bottom: 2px solid #B1DAE7;
+    }
 
     .button:hover:after {
         width: 100%;
