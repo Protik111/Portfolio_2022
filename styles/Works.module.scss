@@ -9,9 +9,9 @@
     justify-content: center;
     align-items: center;
 
-    @media screen and (max-width:880px) {
-        margin-top: -5rem;
-    }
+    // @media screen and (max-width:880px) {
+    //     margin-top: -5rem;
+    // }
 
     .cardContainer {
         margin-left: 15rem;
@@ -21,7 +21,7 @@
             min-height: 200vh;
             margin-left: 0;
             overflow-y: scroll;
-            padding-bottom: 0.5rem;
+            // padding-bottom: 0.5rem;
         }
 
         // .btnContainer {
