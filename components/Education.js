@@ -39,7 +39,7 @@ const Education = ({ setTabIndex, active, setActive }) => {
                         </div>
 
                         <Tilt className="mt-2">
-                            <img className={styles.eduImg} src="./Aiub.png" alt="" />
+                            <img className={styles.eduImg} src="./AIUB.png" alt="" />
                         </Tilt>
                         <div className="">
                             <div>
