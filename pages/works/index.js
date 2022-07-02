@@ -29,7 +29,7 @@ const Works = () => {
             {tabIndex === 1 && <div className={`${styles.container} container`}>
                 {/* <div className={`${styles.details} row`}> */}
                 {/* <div className={`${styles.textContainer} col-12 col-sm-12 col-md-12 col-lg-12`}> */}
-                <section className={`${styles.cardContainer} row mt-5`}>
+                <section className={`${styles.cardContainer} row`}>
                     <div className={styles.btnContainer}>
                         <button className={`${styles.button} ${active === 'projects' ? styles.active : styles.button}`} onClick={() => {
                             setTabIndex(1);
