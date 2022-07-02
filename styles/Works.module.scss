@@ -18,7 +18,7 @@
         color: #B1DAE7;
 
         @media screen and (max-width: 880px) {
-            min-height: calc(100% - 20rem);
+            min-height: 100%;
             margin-left: 0;
             overflow-y: scroll;
             padding-bottom: 0.5rem;
