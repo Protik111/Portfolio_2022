@@ -43,7 +43,7 @@ const Education = ({ setTabIndex, active, setActive }) => {
                         </Tilt>
                         <div className="">
                             <div>
-                                <h4>American International University-Bangladesh</h4>
+                                <h4>American International University-Bangladesh(Aiub)</h4>
                             </div>
                             <div>
                                 <h6>Bachelor of Science in Computer Science and Engineering</h6>
