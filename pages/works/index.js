@@ -43,7 +43,7 @@ const Works = () => {
                     </div>
 
                     <div>
-                        <h2 className="project-heading">
+                        <h2 className={styles.project_heading}>
                             My Recent <strong className="purple">Projects </strong>
                         </h2>
                     </div>
