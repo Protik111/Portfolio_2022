@@ -31,6 +31,7 @@ const ProjectCard = ({ singleproject }) => {
                         <span
                             className={styles.genre_btn}
                             onClick={() => genreSelectionHandler(genre.id)}
+                            key={idx}
                         >
                             <Icon size={20} />
                         </span>
@@ -39,10 +40,10 @@ const ProjectCard = ({ singleproject }) => {
             }
             <div className={styles.btncontainer}>
                 <button className={styles.button} >
-                    <a href={link} target="_blank">Live</a>
+                    <a href={link} target="_blank" rel="noreferrer">Live</a>
                 </button>
                 <button className={`${styles.button}`}>
-                    <a href={fgithub} target="_blank">Code</a>
+                    <a href={fgithub} target="_blank" rel="noreferrer">Code</a>
                 </button>
             </div>
         </div>

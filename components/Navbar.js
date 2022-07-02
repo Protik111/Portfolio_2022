@@ -48,7 +48,7 @@ const Navbar = () => {
                 </li>
 
                 <li className={`${styles.nav_link} ${styles.button} ${path === '/blogs' ? styles.activeN : ''}`}>
-                    <a href="https://medium.com/@rafiurrahmanprotik" target="_blank" className={styles.nav_link}>
+                    <a href="https://medium.com/@rafiurrahmanprotik" target="_blank" rel="noreferrer" className={styles.nav_link}>
                         <BsFillPenFill className={styles.icon} size={32}></BsFillPenFill>
                         <p className={styles.link_text}>Blogs</p>
                     </a>

@@ -8,7 +8,7 @@ import Education from '../../components/Education';
 import Skills from '../../components/Skills';
 import AOS from 'aos';
 
-const about = () => {
+const About = () => {
     const [tabIndex, setTabIndex] = useState(1);
     const [active, setActive] = useState("about");
 
@@ -52,7 +52,7 @@ const about = () => {
                             Let Me Introduce, Myself.
                         </h1>
                         <p className={styles.aboutDetails}>
-                            I'm a Sofware Developer from Dhaka, Bangladesh.
+                            {`I'm a Sofware Developer from Dhaka, Bangladesh.`}
                             <br />
                             <br />I build application with
                             <i>
@@ -60,7 +60,7 @@ const about = () => {
                             </i>
                             <br />
                             <br />
-                            My field of Interest's are building new &nbsp;
+                            {`My field of Interest's are building new`} &nbsp;
                             <i>
                                 <b className={styles.skill}>Web Technologies and Products </b> and
                                 also in areas related to{" "}
@@ -114,4 +114,4 @@ const about = () => {
     );
 };
 
-export default about;
+export default About;
