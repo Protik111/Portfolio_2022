@@ -11,6 +11,8 @@
 
     @media screen and (max-width: 880px) {
         min-height: 100vh;
+        height: -webkit-fill-available;
+        overflow: scroll;
     }
 
     .details {

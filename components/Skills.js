@@ -22,7 +22,7 @@ const Skills = ({ setTabIndex, active, setActive }) => {
     }, []);
     return (
         <div>
-            <div className={`${styles.container} container`}>
+            {/* <div className={`${styles.container} container`}> */}
                 <div className={`${styles.container} container ms-lg-4`}>
                     <div className={`${styles.details} row`}>
                         <div className={`${styles.textContainer} col-12 col-sm-12 col-md-10 col-lg-6`} data-aos="fade-right">
@@ -110,7 +110,7 @@ const Skills = ({ setTabIndex, active, setActive }) => {
                     {/* <div className=''>
                     <hr className='heading' />
     </div> */}
-                </div>
+                {/* </div> */}
             </div >
         </div>
     );
